@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'RecipeBook';
+  canTargetRecipe:boolean = false;
+
+  onGetRecipeEvent(e:string){
+    if(e === 'recipe'){
+      this.canTargetRecipe = true;
+    }
+    else{
+      this.canTargetRecipe = false;
+    }
+  }
 }
